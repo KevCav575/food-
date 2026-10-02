@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+/* Tokens de marca food+ (Tailwind v4: configuración vía CSS) */
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque', ui-sans-serif, system-ui, sans-serif;
+
+  /* Neutros de marca: tinta verde muy oscura sobre un fondo hueso */
+  --color-ink: #10261a;
+  --color-ink-soft: #3c4b42;
+  --color-ink-muted: #4b5b51;
+  --color-ground: #f6f7f2;
+  --color-line: #d9dfd4;
+  --color-mint: #e3f1e6;
+  --color-sage: #a7c4b0;
+
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+  --color-brand-800: #166534;
+
+  /* Semáforo de seguridad de ingredientes */
+  --color-safe: #16a34a;
+  --color-warning: #f59e0b;
+  --color-danger: #dc2626;
+
+  /* Línea animada del visor del escáner */
+  --animate-scan: scan 2s ease-in-out infinite;
+  @keyframes scan {
+    0%,
+    100% {
+      top: 12%;
+    }
+    50% {
+      top: 88%;
+    }
+  }
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+/* Desplazamiento suave a las secciones de la landing (respetando "reducir movimiento") */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
