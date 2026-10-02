@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:match*",
+      "destination": "https://food-mdn7.onrender.com/api/:match*"
+    }
+  ]
+}
